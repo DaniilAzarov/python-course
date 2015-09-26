@@ -12,6 +12,4 @@ def letter_counter(users_str):
     users_lst.sort()
     for letter in users_lst:
         print(letter, data[letter])
-
 users_input = letter_counter(input())
-
