@@ -15,7 +15,7 @@ def euclid(a, b):
             return euclid(a, b % a)
 
 
-def rpfilter(a, args):
+def rpfilter(a, *args):
     simple_list = []
     for n in args:
         n = int(n)
@@ -31,4 +31,4 @@ def rpfilter(a, args):
         return None
 
 users_input = input().split(' ')
-print(rpfilter(int(users_input[0]), users_input[1:]))
+print(rpfilter(int(users_input[0]), *users_input[1:]))
