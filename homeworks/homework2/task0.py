@@ -7,7 +7,7 @@ def plural(quantity, vars):
         gadget = vars[1]
     else:
         gadget = vars[2]
-    return str(str(quantity) + " " + gadget)
+    return quantity, gadget
 
 vars_1 = ['утюг', 'утюга', 'утюгов']
 vars_2 = ['ложка', 'ложки', 'ложек']
