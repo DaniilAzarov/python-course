@@ -11,13 +11,19 @@ def yazkora(dict):
         else:
             verbs += 1
 
-    def factorial(x):
-        if x == 0:
-            return 1
-        else:
-            return x * factorial(x - 1)
+    def factorial(n):
+     if n == 0:
+          return 1
+     return factorial(n - 1) * n
 
-    cool = factorial(adj) * nouns * verbs
+    if adj > 7:
+        adj = 7
+
+    adj_comb = 0
+    for k in range(adj):
+        adj_comb += factorial(adj) / (factorial(adj-(k + 1)))
+        cool = int(adj_comb) * nouns * verbs
+
     return(cool)
 
 with open("./dict.txt", "r") as dict:
